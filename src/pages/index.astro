@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Dogs from '../components/dog/list-dog.svelte';
+import axios from 'axios';
+const listDog = await axios.get('http://127.0.0.1:3000/api/dog') as any;
+---
+<Layout title="Welcome to Astro.">
+	<Dogs  client:load listDog={listDog.data} />
+</Layout>

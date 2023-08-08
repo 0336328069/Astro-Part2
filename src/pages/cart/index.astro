@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ListCart from '../../components/cart/list-cart.svelte';
+---
+<Layout title="Welcome to Astro.">
+    <main class="container mx-auto mb-20 min-h-screen">
+        <h1 class="leading-relaxed font-primary font-extrabold text-4xl text-center text-palette-primary mt-4 py-2 sm:py-4">Your Cart</h1>
+        <div class="min-h-80 max-w-2xl my-4 sm:my-8 mx-auto w-full">
+            <ListCart client:load />
+        </div>
+    </main>
+</Layout>
